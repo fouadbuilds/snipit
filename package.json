@@ -11,8 +11,22 @@
   "bin": {
     "snipit": "./bin/snipit.js"
   },
-  "files": ["dist/", "bin/"],
-  "keywords": [],
+  "files": [
+    "dist/",
+    "bin/"
+  ],
+  "keywords": [
+    "cli",
+    "snipit",
+    "snippet-manager",
+    "developer-tools",
+    "typescript",
+    "productivity",
+    "code-snippets",
+    "terminal",
+    "local-storage",
+    "node-cli"
+  ],
   "author": "fouadbuilds",
   "license": "MIT",
   "type": "module",
