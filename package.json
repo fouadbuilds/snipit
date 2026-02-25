@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "tsx bin/snipit.js",
     "build": "tsc",
-    "start": "node bin/snipit.js"
+    "start": "node bin/snipit.js",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:ui": "vitest --ui"
   },
   "bin": {
     "snipit": "./bin/snipit.js"
@@ -34,13 +37,13 @@
     "@types/node": "^25.3.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
   },
   "dependencies": {
     "@inquirer/prompts": "^8.3.0",
     "clipboardy": "^5.3.1",
     "commander": "^14.0.3",
-    "picocolors": "^1.1.1",
-    "vitest": "^4.0.18"
+    "picocolors": "^1.1.1"
   }
 }
