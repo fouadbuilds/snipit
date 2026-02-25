@@ -6,10 +6,12 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@fouaden/snipit"><img src="https://img.shields.io/npm/v/snipit.svg" alt="npm version"></a>
   <a href="https://nodejs.org"><img src="https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js" alt="Node.js 18+"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green" alt="License"></a>
 </p>
+
+
+
 
 <p align="center">
   <a href="#install">Install</a> •
