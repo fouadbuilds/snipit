@@ -3,6 +3,19 @@
   "version": "1.1.1",
   "description": "A lightweight CLI tool to save, search and tag code snippets locally. Stop re-typing; start snipping.",
   "main": "bin/snipit.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "bin": {
+    "snipit": "./bin/snipit.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fouadbuilds/snipit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fouadbuilds/snipit/issues"
+  },
+  "homepage": "https://github.com/fouadbuilds/snipit#readme",
   "scripts": {
     "dev": "tsx bin/snipit.js",
     "build": "tsc",
@@ -10,9 +23,6 @@
     "test": "vitest",
     "test:run": "vitest run",
     "test:ui": "vitest --ui"
-  },
-  "bin": {
-    "snipit": "./bin/snipit.js"
   },
   "files": [
     "dist/",
@@ -32,7 +42,6 @@
   ],
   "author": "fouadbuilds",
   "license": "MIT",
-  "type": "module",
   "devDependencies": {
     "@types/node": "^25.3.0",
     "ts-node": "^10.9.2",
