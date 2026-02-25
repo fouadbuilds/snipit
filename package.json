@@ -4,10 +4,10 @@
   "description": "A lightweight CLI tool to save, tag, and fuzzy-search code snippets locally. Stop re-typing; start snipping.",
   "main": "bin/snipit.js",
   "scripts": {
-  "dev": "tsx bin/snipit.js",
-  "build": "tsc",
-  "start": "node bin/snipit.js"
-},
+    "dev": "tsx bin/snipit.js",
+    "build": "tsc",
+    "start": "node bin/snipit.js"
+  },
   "bin": {
     "snipit": "./bin/snipit.js"
   },
@@ -22,6 +22,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "@inquirer/prompts": "^8.3.0",
     "clipboardy": "^5.3.1",
     "commander": "^14.0.3",
     "picocolors": "^1.1.1",

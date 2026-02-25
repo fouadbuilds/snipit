@@ -21,7 +21,7 @@ export const listCommand = new Command("list")
       snippets = snippets.filter((s) => s.title.toLowerCase().includes(q));
     }
 
-    if (snippets.length === 0) {
+    if (getAll().length === 0) {
       const hint = options.tag
         ? `No snippets found with tag "${options.tag}"`
         : "No snippets saved yet. Use snipit save to add one.";
@@ -43,3 +43,5 @@ export const listCommand = new Command("list")
 
     console.log("");
   });
+
+  
