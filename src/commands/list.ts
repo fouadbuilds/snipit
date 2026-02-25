@@ -12,9 +12,8 @@ export const listCommand = new Command("list")
 
     // tag filter if provided
     if (options.tag) {
-      snippets = snippets.filter((s) => {
-        s.tags.includes(options.tag!.toLowerCase());
-      });
+      const targetTag = options.tag.toLowerCase();
+      snippets = snippets.filter((s) => s.tags.includes(targetTag));
     }
 
     if (options.search) {
@@ -33,20 +32,14 @@ export const listCommand = new Command("list")
     console.log("");
     console.log(pc.bold(`  ${snippets.length} snippet(s)\n`));
 
-    console.log('');
-    console.log(pc.bold(`  ${snippets.length} snippet(s)\n`));
-
     for (const s of snippets) {
-      const id    = pc.dim(`#${String(s.id).padEnd(3)}`);
+      const id = pc.dim(`#${String(s.id).padEnd(3)}`);
       const title = pc.cyan(s.title);
-      const tags  = s.tags.length > 0
-        ? pc.dim(` [${s.tags.join(', ')}]`)
-        : '';
-      const date  = pc.dim(` · ${s.createdAt}`);
+      const tags = s.tags.length > 0 ? pc.green(` [${s.tags.join(", ")}]`) : "";
+      const date = pc.dim(` · ${s.createdAt}`);
 
       console.log(`  ${id} ${title}${tags}${date}`);
     }
 
-    console.log('');
-
+    console.log("");
   });
