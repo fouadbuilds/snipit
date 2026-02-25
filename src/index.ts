@@ -11,4 +11,6 @@ program
     start();
   });
 
+  // Commands
+
 program.parse(process.argv);
