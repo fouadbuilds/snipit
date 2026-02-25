@@ -1,19 +1,19 @@
-import { Command } from "commander";
-import pc from "picocolors";
-import { getAll } from "../utils/storage.js";
-import type { Snippet } from "../types/index.js";
+import { Command } from 'commander';
+import pc from 'picocolors';
+import { getAll } from '../utils/storage.js';
+import type { Snippet } from '../types/index.js';
 
-export const listCommand = new Command("list")
-  .description("List all saved snippets")
-  .option("-t, --tag <tag>", "Filter by tag")
-  .option("-s, --search <query>", "Search snippet titles")
+export const listCommand = new Command('list')
+  .description('List all saved snippets')
+  .option('-t, --tag <tag>', 'Filter by tag')
+  .option('-s, --search <query>', 'Search snippet titles')
   .action((options: { tag?: string; search?: string }) => {
     let snippets: Snippet[] = getAll();
 
-    // tag filter if provided
     if (options.tag) {
-      const targetTag = options.tag.toLowerCase();
-      snippets = snippets.filter((s) => s.tags.includes(targetTag));
+      snippets = snippets.filter((s) =>
+        s.tags.includes(options.tag!.toLowerCase())
+      );
     }
 
     if (options.search) {
@@ -21,27 +21,27 @@ export const listCommand = new Command("list")
       snippets = snippets.filter((s) => s.title.toLowerCase().includes(q));
     }
 
-    if (getAll().length === 0) {
+    if (snippets.length === 0) {
       const hint = options.tag
         ? `No snippets found with tag "${options.tag}"`
-        : "No snippets saved yet. Use snipit save to add one.";
-      console.log(pc.yellow(`  ${hint}`));
+        : 'No snippets yet. Use snipit save to add one.';
+      console.log(pc.yellow(`\n  ${hint}\n`));
       return;
     }
 
-    console.log("");
-    console.log(pc.bold(`  ${snippets.length} snippet(s)\n`));
+    console.log('');
 
     for (const s of snippets) {
-      const id = pc.dim(`#${String(s.id).padEnd(3)}`);
-      const title = pc.cyan(s.title);
-      const tags = s.tags.length > 0 ? pc.green(` [${s.tags.join(", ")}]`) : "";
-      const date = pc.dim(` · ${s.createdAt}`);
+      const id    = pc.bold(pc.cyan(`  #${s.id}`));
+      const title = pc.white(`  ${s.title}`);
+      const tags  = s.tags.length > 0 ? pc.green(s.tags.join(', ')) + pc.dim(' · ') : '';
+      const date  = pc.dim(s.createdAt);
 
-      console.log(`  ${id} ${title}${tags}${date}`);
+      console.log(id);
+      console.log(title);
+      console.log(`      ${tags}${date}`);
+      console.log('');
     }
-
-    console.log("");
   });
 
   

@@ -1,7 +1,7 @@
 {
-  "name": "snipit",
+  "name": "@fouaden/snipit",
   "version": "1.0.0",
-  "description": "A lightweight CLI tool to save, tag, and fuzzy-search code snippets locally. Stop re-typing; start snipping.",
+  "description": "A lightweight CLI tool to save, search and tag code snippets locally. Stop re-typing; start snipping.",
   "main": "bin/snipit.js",
   "scripts": {
     "dev": "tsx bin/snipit.js",
@@ -11,6 +11,7 @@
   "bin": {
     "snipit": "./bin/snipit.js"
   },
+  "files": ["dist/", "bin/"],
   "keywords": [],
   "author": "fouadbuilds",
   "license": "MIT",
