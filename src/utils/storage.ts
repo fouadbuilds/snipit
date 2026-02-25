@@ -57,7 +57,7 @@ export function addSnippet(snippet: Omit<Snippet, "id" | "createdAt">): Snippet 
   return newSnippet;
 }
 
-export function deleteByID(id:number):boolean {
+export function deleteById(id:number):boolean {
     const store = readStore()
     const lastStoreSize = store.snippets.length
     store.snippets = store.snippets.filter((s) => s.id != id)
