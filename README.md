@@ -44,7 +44,7 @@ npm i -g @fouaden/snipit
 ## Note!
 macOS/Linux: If you get an EACCES permission error, run
 ``` bash
- sudo npm install -g snipit. # This happens when npm's global folder is owned by root.
+ sudo npm install -g @fouaden/snipit # This happens when npm's global folder is owned by root.
 ```
 
 ## Quick Start
