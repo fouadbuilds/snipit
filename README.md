@@ -33,12 +33,19 @@ snipit stores them locally, tagged and searchable, ready to copy to your clipboa
 ## Install
 
 ```bash
-npm install -g snipit
+npm i -g @fouaden/snipit
 ```
+
 
 **Requirements**: Node.js 18+
 
 ---
+
+## Note!
+macOS/Linux: If you get an EACCES permission error, run
+``` bash
+ sudo npm install -g snipit. # This happens when npm's global folder is owned by root.
+```
 
 ## Quick Start
 
