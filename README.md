@@ -1,6 +1,6 @@
 # snipit
 
-A personal code snippet manager for your terminal. Save, find, and copy snippets without leaving your workflow.
+A lightweight CLI tool to save, search and tag code snippets locally. Stop re-typing; start snipping.
 
 ```bash
 snipit save "fetch with timeout" --tag js
@@ -28,7 +28,7 @@ snipit save "kill port 3000" --code "lsof -ti:3000 | xargs kill" --tag node
 # from a file
 snipit save "tsconfig base" --file ./tsconfig.json --tag ts
 
-# multiline — opens your default editor
+# multiline — opens your default text editor
 snipit save "async fetch"
 ```
 
@@ -67,16 +67,6 @@ Snippets are stored locally at `~/.snipit/snippets.json` — no account, no sync
 
 ---
 
-## Contributing
-
-Pull requests are welcome. For major changes open an issue first.
-
-1. Fork the repo
-2. Create a branch (`git checkout -b feat/your-feature`)
-3. Commit your changes
-4. Push and open a PR
-
----
 
 ## License
 
