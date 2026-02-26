@@ -6,12 +6,10 @@
 </p>
 
 <p align="center">
-  <a href="https://nodejs.org"><img src="https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js" alt="Node.js 18+"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green" alt="License"></a>
+<a href="https://nodejs.org"><img src="https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js" alt="Node.js 18+"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green" alt="License"></a>
+
 </p>
-
-
-
 
 <p align="center">
   <a href="#install">Install</a> •
@@ -36,14 +34,15 @@ snipit stores them locally, tagged and searchable, ready to copy to your clipboa
 npm i -g @fouaden/snipit
 ```
 
-
 **Requirements**: Node.js 18+
 
 ---
 
 ## Note!
+
 macOS/Linux: If you get an EACCES permission error, run
-``` bash
+
+```bash
  sudo npm install -g @fouaden/snipit # This happens when npm's global folder is owned by root.
 ```
 
