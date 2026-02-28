@@ -5,6 +5,7 @@ import { saveCommand } from "./commands/save.js";
 import { deleteCommand } from "./commands/delete.js";
 import { listCommand } from "./commands/list.js";
 
+
 const program = new Command();
 
 const logo = picocolors.cyan(String.raw`
@@ -36,6 +37,8 @@ program.addCommand(saveCommand);
 program.addCommand(getCommand);
 program.addCommand(deleteCommand);
 program.addCommand(listCommand);
+
+
 
 program.parse(process.argv);
 
