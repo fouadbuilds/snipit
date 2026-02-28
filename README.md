@@ -30,7 +30,8 @@ snipit stores them locally, tagged and searchable, ready to copy to your clipboa
 
 ## Install
 
-```bash
+``` bash
+
 npm i -g @fouaden/snipit
 ```
 
@@ -42,13 +43,15 @@ npm i -g @fouaden/snipit
 
 macOS/Linux: If you get an EACCES permission error, run
 
-```bash
+``` bash
+
  sudo npm install -g @fouaden/snipit # This happens when npm's global folder is owned by root.
 ```
 
 ## Quick Start
 
-```bash
+``` bash
+
 # save a snippet
 snipit save "kill port 3000" --code "lsof -ti:3000 | xargs kill" --tag node
 
@@ -65,7 +68,8 @@ snipit get "kill port 3000" --copy
 
 ### Save a snippet
 
-```bash
+``` bash
+
 # inline code
 snipit save "kill port 3000" --code "lsof -ti:3000 | xargs kill" --tag node
 
@@ -78,13 +82,15 @@ snipit save "async fetch" --tag js
 
 Tags are comma-separated and optional:
 
-```bash
+``` bash
+
 snipit save "docker prune" --code "docker system prune -af" --tag "docker,ops"
 ```
 
 ### List snippets
 
-```bash
+``` bash
+
 snipit list                    # all snippets
 snipit list --tag ts           # filter by tag
 snipit list --search "docker"  # search by title
@@ -92,31 +98,41 @@ snipit list --search "docker"  # search by title
 
 ### Get a snippet
 
-```bash
+``` bash
+
 snipit get "kill port 3000"          # prints to terminal
 snipit get "kill port 3000" --copy   # prints + copies to clipboard
 ```
 
 Since output goes to stdout, you can pipe it too:
 
-```bash
+``` bash
+
 snipit get "tsconfig base" > tsconfig.json
 snipit get "nginx config" | ssh user@server "cat > /etc/nginx/nginx.conf"
 ```
 
 ### Delete a snippet
 
-```bash
+``` bash
+
 snipit delete 3   # use the ID shown in snipit list
 ```
 
+### Import and Export snippets
+
+``` bash
+snipit import -f ./new-snippets.json
+
+snipit export -o ./my-snippets.json
+```
 ---
 
 ## Data
 
 Snippets are stored at `~/.snipit/snippets.json` as a plain JSON file. No database, no server, no account.
 
-```json
+``` json
 {
   "snippets": [
     {
