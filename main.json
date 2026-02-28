@@ -1,0 +1,37 @@
+[
+  {
+    "title": "tsconfig base",
+    "code": "{\r\n  \"compilerOptions\": {\r\n    \"target\": \"ESNext\",\r\n    \"module\": \"NodeNext\",\r\n    \"moduleResolution\": \"NodeNext\",\r\n    \"outDir\": \"./dist\",\r\n    \"rootDir\": \"./src\",\r\n    \"declaration\": true,\r\n    \"sourceMap\": true,\r\n    \"strict\": true,\r\n  },\r\n  \"include\": [\"src/**/*\"]\r\n}",
+    "tags": [
+      "ts"
+    ],
+    "id": 2,
+    "createdAt": "2026-02-25"
+  },
+  {
+    "title": "kill port",
+    "code": "lsof -ti:3000 | xargs kill",
+    "tags": [
+      "node",
+      "dev"
+    ],
+    "id": 4,
+    "createdAt": "2026-02-25"
+  },
+  {
+    "title": "howtocommit",
+    "code": "feat: Commits, which adds a new feature\r\nfix: Commits, that fixes a bug\r\nrefactor: refactored code that neither fixes a bug nor adds a feature but rewrites/restructures your code.\r\nchore : Changes that do not relate to a fix or feature and don’t modify src or test files basically miscellaneous commits (for example, updating dependencies or modifying .gitignore file)\r\nperf : Commits are special refactor commits, geared towards improving performance.\r\nci : Continuous integration related.\r\nops : Commits, that affect operational components like infrastructure, deployment, backup , recovery …\r\nbuild : Changes that affect the build system build tool, ci pipeline, dependencies, project version, …\r\ndocs : Commits, that affect documentation, such as the README.\r\nstyle : changes that do not affect the meaning of the code, likely related to code formatting such as white-space, missing semi-colons, etc.\r\nrevert: reverts a previous commit.\r\ntest: commits that add missing tests or correct existing tests",
+    "tags": [],
+    "id": 8,
+    "createdAt": "2026-02-26"
+  },
+  {
+    "title": "test",
+    "code": "teset",
+    "tags": [
+      "test"
+    ],
+    "id": 9,
+    "createdAt": "2026-02-25"
+  }
+]

@@ -4,6 +4,8 @@ import { getCommand } from "./commands/get.js";
 import { saveCommand } from "./commands/save.js";
 import { deleteCommand } from "./commands/delete.js";
 import { listCommand } from "./commands/list.js";
+import { importCommand } from "./commands/import.js";
+import { exportCommand } from "./commands/export.js";
 
 
 const program = new Command();
@@ -37,6 +39,8 @@ program.addCommand(saveCommand);
 program.addCommand(getCommand);
 program.addCommand(deleteCommand);
 program.addCommand(listCommand);
+program.addCommand(importCommand);
+program.addCommand(exportCommand);
 
 
 
