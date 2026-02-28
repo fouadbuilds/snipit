@@ -28,18 +28,22 @@ export const exportCommand = new Command("export")
 
       if (existsSync(finalPath)){
         console.error(pc.yellow(`\n✖ Export failed: A file or folder ${fileName} already exists at this location.`))
+        process.exit(1)
       }  
 
       const dataToExport = JSON.stringify(store.snippets, null, 2);
 
       writeFileSync(finalPath, dataToExport, "utf8");
 
+      // Export Message
       console.log(
         pc.green(
           `\n✔ Successfully exported ${pc.bold(store.snippets.length)} snippets to:`,
         ),
       );
       console.log(pc.cyan(finalPath));
+
+
     } catch (err: any) {
       console.error(pc.red(`\n✖ Export failed: ${err.message}`));
       process.exit(1);
