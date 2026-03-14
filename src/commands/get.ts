@@ -6,7 +6,7 @@ import { getByTitle } from "../utils/storage.js";
 export const getCommand = new Command("get")
   .description("Retrieve a snippet by title")
   .argument("<title>", "The title of the snippet to retrive")
-  .option("--copy", "Copy the Code to clipboard automatically")
+  .option("-c, --copy", "Copy the Code to clipboard automatically")
   .action(async (title: string, options: { copy?: boolean }) => {
     const snippet = getByTitle(title);
 
